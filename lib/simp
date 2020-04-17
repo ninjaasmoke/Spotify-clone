@@ -1,0 +1,68 @@
+
+
+
+
+
+SliverAppBar(
+                centerTitle: true,
+                elevation: 0,
+                pinned: true,
+                expandedHeight: MediaQuery.of(context).size.height * .5,
+                backgroundColor: Color(0xff111111),
+                flexibleSpace: FlexibleSpaceBar(
+                  collapseMode: CollapseMode.parallax,
+                  title: Text(
+                    widget.artist,
+                    style: TextStyle(fontWeight: FontWeight.w900, fontSize: 30),
+                  ),
+//                  centerTitle: true,
+                  background: Stack(
+                    children: <Widget>[
+                      Container(
+                        height: MediaQuery.of(context).size.height * .49,
+                        child: Image.asset(
+                          widget.photo,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Container(
+                        height: MediaQuery.of(context).size.height * .49,
+                        decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                                colors: [
+                                  Color(0xff000000).withOpacity(0.4),
+                                  Color(0xff111111),
+                                ],
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter)),
+                      ),
+//                      Center(
+//                        child: Text(
+//                          widget.artist,
+//                          style: TextStyle(
+//                              fontWeight: FontWeight.w900, fontSize: 50),
+//                        ),
+//                      )
+                    ],
+                  ),
+                ),
+              ),
+
+
+
+
+
+
+
+
+
+
+
+              CupertinoSliverNavigationBar(
+                              backgroundColor: Color(0xff111111),
+                              largeTitle: Text(artistName, style: TextStyle(fontWeight: FontWeight.w900, color: Colors.white),),
+                              leading: IconButton(
+                                onPressed: () {},
+                                icon: Icon(Icons.arrow_back, color: Colors.white,),
+                              ),
+                            ),
